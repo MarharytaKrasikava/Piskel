@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="google-signin-scope" content="profile email">
+  <meta name="google-signin-client_id"
+    content="176007829274-glgkvve5pe6ih5c9da7m6s8l4uongcnj.apps.googleusercontent.com">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <script src="https://apis.google.com/js/platform.js" async defer></script>
+  <title>PISKEL-clone</title>
+</head>
+
+<body>
+  <header>
+    <p>PISKEL-clone</p>
+    <div class="open-landing">To Start Page</div>
+    <div class="google">
+      <div class="g-signin2" data-theme="dark"></div>
+      <div class="g-signout">Выйти</div>
+      <img class="photo"></img>
+    </div>
+  </header>
+  <main>
+    <section class="panel">
+      <section class="palette">
+        <p id="paint-bucket" class="tools"><i class="fas fa-fill-drip">(B)</i></p>
+        <p id="color-picker" class="tools"><i class="fas fa-eye-dropper">(C)</i></p>
+        <p id="pencil" class="tools"><i class="fas fa-pencil-alt">(P)</i></p>
+        <p id="eraser" class="tools"><i class="fas fa-eraser">(E)</i></p>
+        <p id="roller" class="tools"><i class="fas fa-paint-roller">(A)</i></p>
+        <p id="stroke" class="tools"><i class="fas fa-pencil-ruler"></i></p>
+        <p id="rectange" class="tools"><i class="far fa-square"></i></p>
+        <p id="circle" class="tools"><i class="far fa-circle"></i></p>
+        <p id="lighten" class="tools"><i class="fas fa-adjust"></i></p>
+        <p id="black-out" class="tools"><i class="far fa-moon"></i></p>
+      </section>
+      <section class="colors">
+        <input type="color" class="first-color" value="#7a72b1"></input>
+        <input type="color" class="second-color" value="#99d8e6"></input>
+      </section>
+    </section>
+    <section class="frames-panel">
+      <div class="frame">
+        <p>1</p>
+        <canvas class="frame-canvas" width="128" height="128"></canvas>
+        <i class="far fa-trash-alt"></i>
+        <i class="far fa-copy"></i>
+      </div>
+      <div class="add-frame">
+        <i class="fas fa-plus"></i>
+        <p>Add new frame (N)</p>
+      </div>
+    </section>
+    <section class="canvas-wrapper">
+      <div class="canvas-values">
+        <div class="size">
+          <div class="to32">32x32</div>
+          <div class="to64">64x64</div>
+          <div class="to128">128x128</div>
+        </div>
+        <div class="coords"></div>
+      </div>
+      <canvas class="main-canvas" width="512" height="512"></canvas>
+    </section>
+    <section class="animation">
+      <div class="preview"></div>
+      <div class="freq-rate">
+        <label for="ticks">0</label>
+        <input id="rate" value="0" type="range" min="0" max="24" step="1" list="ticks">
+        <datalist id="ticks">
+          <option value="0">
+          <option value="8">
+          <option value="16">
+          <option value="24">
+        </datalist>
+      </div>
+      <div class="fullscreen standart">Show In Fullscreen</div>
+      <h2>Save Your Animation As...</h2>
+      <div class="save-size">
+        <div>
+          <label for="save-gif">.gif size</label>
+          <select id="save-gif">
+            <option value="32">32x32</option>
+            <option value="64">64x64</option>
+            <option value="128">128x64</option>
+          </select>
+        </div>
+        <div>
+          <label for="save-apng">.apng size</label>
+          <select id="save-apng">
+            <option value="128">128x128</option>
+          </select>
+        </div>
+      </div>
+      <div class="save">
+        <div class="gif standart">Save as .gif</div>
+        <div class="apng standart">Save as .apng</div>
+      </div>
+    </section>
+  </main>
+<script type="text/javascript" src="app.bundle.js"></script></body>
+
+</html>
